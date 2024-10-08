@@ -13,6 +13,8 @@
 		3557469A2CB52C5500FB726E /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 355746992CB52C5500FB726E /* Base */; };
 		3557469C2CB52C5600FB726E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3557469B2CB52C5600FB726E /* Assets.xcassets */; };
 		3557469F2CB52C5600FB726E /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 3557469E2CB52C5600FB726E /* Base */; };
+		355746A72CB5344C00FB726E /* RealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355746A62CB5344C00FB726E /* RealmModel.swift */; };
+		355746AA2CB534A900FB726E /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 355746A92CB534A900FB726E /* RealmSwift */; };
 		72A3AAE62CB52DFC005FBCDD /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 72A3AAE52CB52DFC005FBCDD /* .gitignore */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +27,7 @@
 		3557469B2CB52C5600FB726E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3557469E2CB52C5600FB726E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		355746A02CB52C5600FB726E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		355746A62CB5344C00FB726E /* RealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModel.swift; sourceTree = "<group>"; };
 		72A3AAE52CB52DFC005FBCDD /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -33,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				355746AA2CB534A900FB726E /* RealmSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +66,7 @@
 				355746922CB52C5500FB726E /* AppDelegate.swift */,
 				355746942CB52C5500FB726E /* SceneDelegate.swift */,
 				355746962CB52C5500FB726E /* ViewController.swift */,
+				355746A62CB5344C00FB726E /* RealmModel.swift */,
 				355746982CB52C5500FB726E /* Main.storyboard */,
 				3557469B2CB52C5600FB726E /* Assets.xcassets */,
 				3557469D2CB52C5600FB726E /* LaunchScreen.storyboard */,
@@ -86,6 +91,9 @@
 			dependencies = (
 			);
 			name = MovieTeamProject;
+			packageProductDependencies = (
+				355746A92CB534A900FB726E /* RealmSwift */,
+			);
 			productName = MovieTeamProject;
 			productReference = 3557468F2CB52C5500FB726E /* MovieTeamProject.app */;
 			productType = "com.apple.product-type.application";
@@ -114,6 +122,9 @@
 				Base,
 			);
 			mainGroup = 355746862CB52C5500FB726E;
+			packageReferences = (
+				355746A82CB534A900FB726E /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
 			productRefGroup = 355746902CB52C5500FB726E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -143,6 +154,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				355746972CB52C5500FB726E /* ViewController.swift in Sources */,
+				355746A72CB5344C00FB726E /* RealmModel.swift in Sources */,
 				355746932CB52C5500FB726E /* AppDelegate.swift in Sources */,
 				355746952CB52C5500FB726E /* SceneDelegate.swift in Sources */,
 			);
@@ -375,6 +387,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		355746A82CB534A900FB726E /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				kind = exactVersion;
+				version = 20.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		355746A92CB534A900FB726E /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 355746A82CB534A900FB726E /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 355746872CB52C5500FB726E /* Project object */;
 }
