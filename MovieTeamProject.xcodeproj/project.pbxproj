@@ -11,7 +11,11 @@
 		355746952CB52C5500FB726E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355746942CB52C5500FB726E /* SceneDelegate.swift */; };
 		3557469C2CB52C5600FB726E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3557469B2CB52C5600FB726E /* Assets.xcassets */; };
 		3557469F2CB52C5600FB726E /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 3557469E2CB52C5600FB726E /* Base */; };
+
+		355746A72CB5344C00FB726E /* RealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355746A62CB5344C00FB726E /* RealmModel.swift */; };
+		355746AA2CB534A900FB726E /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 355746A92CB534A900FB726E /* RealmSwift */; };
 		440160C32CB534DB004EC740 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 440160C22CB534DB004EC740 /* Alamofire */; };
+
 		72A3AAE62CB52DFC005FBCDD /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 72A3AAE52CB52DFC005FBCDD /* .gitignore */; };
 		72A3AAED2CB534D2005FBCDD /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A3AAEC2CB534D2005FBCDD /* BaseView.swift */; };
 		72A3AAEF2CB534EA005FBCDD /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A3AAEE2CB534EA005FBCDD /* BaseViewController.swift */; };
@@ -29,6 +33,7 @@
 		3557469B2CB52C5600FB726E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3557469E2CB52C5600FB726E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		355746A02CB52C5600FB726E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		355746A62CB5344C00FB726E /* RealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModel.swift; sourceTree = "<group>"; };
 		72A3AAE52CB52DFC005FBCDD /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		72A3AAEC2CB534D2005FBCDD /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		72A3AAEE2CB534EA005FBCDD /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -42,6 +47,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+
+				355746AA2CB534A900FB726E /* RealmSwift in Frameworks */,
 				440160C32CB534DB004EC740 /* Alamofire in Frameworks */,
 				72A3AAF42CB53569005FBCDD /* RxSwift in Frameworks */,
 				72A3AAF22CB53569005FBCDD /* RxCocoa in Frameworks */,
@@ -83,6 +90,9 @@
 			children = (
 				355746922CB52C5500FB726E /* AppDelegate.swift */,
 				355746942CB52C5500FB726E /* SceneDelegate.swift */,
+				355746962CB52C5500FB726E /* ViewController.swift */,
+				355746A62CB5344C00FB726E /* RealmModel.swift */,
+				355746982CB52C5500FB726E /* Main.storyboard */,
 				3557469B2CB52C5600FB726E /* Assets.xcassets */,
 				72A3AAE82CB532E6005FBCDD /* StoryBoard */,
 			);
@@ -142,9 +152,12 @@
 			);
 			name = MovieTeamProject;
 			packageProductDependencies = (
+
+				355746A92CB534A900FB726E /* RealmSwift */,
 				440160C22CB534DB004EC740 /* Alamofire */,
 				72A3AAF12CB53569005FBCDD /* RxCocoa */,
 				72A3AAF32CB53569005FBCDD /* RxSwift */,
+
 			);
 			productName = MovieTeamProject;
 			productReference = 3557468F2CB52C5500FB726E /* MovieTeamProject.app */;
@@ -175,6 +188,8 @@
 			);
 			mainGroup = 355746862CB52C5500FB726E;
 			packageReferences = (
+
+				355746A82CB534A900FB726E /* XCRemoteSwiftPackageReference "realm-swift" */,
 				440160C12CB534DB004EC740 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				72A3AAF02CB53569005FBCDD /* XCRemoteSwiftPackageReference "RxSwift" */,
 			);
@@ -205,6 +220,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+
+				355746972CB52C5500FB726E /* ViewController.swift in Sources */,
+				355746A72CB5344C00FB726E /* RealmModel.swift in Sources */,
 				72A3AAED2CB534D2005FBCDD /* BaseView.swift in Sources */,
 				72A3AAF62CB53575005FBCDD /* BaseViewModel.swift in Sources */,
 				72A3AAEF2CB534EA005FBCDD /* BaseViewController.swift in Sources */,
@@ -436,6 +454,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+
+		355746A82CB534A900FB726E /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				kind = exactVersion;
+				version = 20.0.0;
 		440160C12CB534DB004EC740 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire";
@@ -448,11 +473,18 @@
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 6.8.0;
+
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+
+		355746A92CB534A900FB726E /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 355746A82CB534A900FB726E /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+
 		440160C22CB534DB004EC740 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 440160C12CB534DB004EC740 /* XCRemoteSwiftPackageReference "Alamofire" */;
